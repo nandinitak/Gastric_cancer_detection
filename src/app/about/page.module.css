@@ -1,0 +1,173 @@
+.defGrid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 4rem; align-items: start; }
+.defText h2 { margin-bottom: 1rem; }
+.defText p { color: var(--text-secondary); line-height: 1.9; }
+.defVisual { display: flex; justify-content: center; }
+
+.stomachDiagram {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  max-width: 300px;
+}
+
+.organLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.stomachSvg { width: 100%; max-width: 200px; }
+
+.diagramCaption {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* Types */
+.typesSection {}
+.typeHeader { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+.typeIcon { width: 44px; height: 44px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+.typeName { font-family: var(--font-sans); font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.35rem; }
+
+/* Cascade */
+.pathoSection { background: rgba(255,255,255,0.01); border-top: 1px solid var(--border-color); }
+
+.cascade {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cascadeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cascadeStep {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid;
+}
+
+.cascadeStepNum {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  min-width: 24px;
+}
+
+.cascadeIcon { font-size: 1.3rem; }
+
+.cascadeContent { width: 100%; }
+.cascadeContent h4 { font-family: var(--font-sans); font-size: 1rem; font-weight: 700; }
+.cascadeContent p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+.cascadeArrow {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0;
+  align-self: center;
+}
+
+/* Molecular */
+.molecularSection {}
+
+/* Staging */
+.stagingSection { background: rgba(255,255,255,0.01); border-top: 1px solid var(--border-color); }
+
+.stageList { display: flex; flex-direction: column; gap: 1rem; }
+
+.stageRow {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  transition: var(--transition);
+}
+
+.stageRow:hover { background: var(--bg-card-hover); transform: translateX(4px); }
+
+.stageBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+  font-size: 0.9rem;
+}
+
+.stageDesc p { color: var(--text-secondary); }
+
+.stageSurvival {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+/* H. pylori */
+.pyloriSection {}
+
+.pyloriGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.pyloriGrid h2 { margin-bottom: 1rem; }
+.pyloriGrid > div > p { color: var(--text-secondary); line-height: 1.9; }
+
+.pyloriStats { display: flex; gap: 2rem; margin-top: 1.5rem; }
+.pyloriStat { text-align: center; }
+.pyloriStat span { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--teal-primary); }
+.pyloriStat label { font-size: 0.78rem; color: var(--text-muted); }
+
+.pyloriMechanisms { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem; }
+
+.mechanism { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.1rem; }
+.mechanism:last-child { margin-bottom: 0; }
+
+.mechNum {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--teal-primary);
+  background: rgba(0,180,216,0.1);
+  border: 1px solid rgba(0,180,216,0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.mechanism p { font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .defGrid { grid-template-columns: 1fr; }
+  .defVisual { display: none; }
+  .pyloriGrid { grid-template-columns: 1fr; gap: 2rem; }
+  .stageRow { grid-template-columns: 100px 1fr 90px; }
+  .pyloriStats { flex-wrap: wrap; }
+}
+
+@media (max-width: 600px) {
+  .stageRow { grid-template-columns: 1fr; }
+  .stageSurvival { text-align: left; }
+}

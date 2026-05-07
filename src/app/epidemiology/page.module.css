@@ -1,0 +1,88 @@
+.quickStats { padding-bottom: 0; }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.statCard:hover { transform: translateY(-3px); box-shadow: var(--shadow-glow); }
+
+.statIcon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.statValue { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.3rem; }
+.statLabel { font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; }
+
+.chartSection {}
+
+.chartCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.chartWrap { position: relative; }
+
+.chartSource {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.75rem;
+}
+
+.twoCharts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Country Table */
+.countryTable {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.countryRow {
+  display: grid;
+  grid-template-columns: 24px 100px 90px 1fr 50px;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.countryRow:last-child { border-bottom: none; }
+
+.countryRank { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
+.countryName { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); }
+.countryCont { font-size: 0.75rem; color: var(--text-muted); }
+
+.countryBarWrap { height: 6px; background: var(--bg-secondary); border-radius: 100px; overflow: hidden; }
+.countryBar { height: 100%; background: var(--gradient-teal); border-radius: 100px; }
+
+.countryRate { font-size: 0.82rem; font-weight: 700; color: var(--teal-primary); text-align: right; }
+
+.sourcesSection { border-top: 1px solid var(--border-color); }
+
+@media (max-width: 1100px) { .statsGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .twoCharts { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) { .statsGrid { grid-template-columns: 1fr; } }

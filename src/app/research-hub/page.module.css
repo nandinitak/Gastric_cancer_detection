@@ -1,0 +1,294 @@
+.profiles { border-bottom: 1px solid var(--border-color); }
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 320px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.profileCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.profileCard:hover { transform: translateY(-4px); box-shadow: var(--shadow-glow); }
+
+.profileImgWrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.25rem;
+}
+
+.profileImg {
+  border-radius: 50%;
+  border: 3px solid var(--blue-primary);
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+}
+
+.profileBadge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.profileName {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.profileRole {
+  font-size: 0.85rem;
+  color: var(--teal-primary);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.profileSpeciality {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.profileTags { display: flex; gap: 0.4rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+
+.profileBio { font-size: 0.88rem; color: var(--text-secondary); text-align: left; line-height: 1.7; margin-bottom: 0.75rem; }
+
+.profileSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.skill {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  background: rgba(30,77,140,0.15);
+  border: 1px solid rgba(30,77,140,0.3);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Stats Panel */
+.statsPanel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+}
+
+.statsPanelTitle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.impactRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.impactRow:last-child { border-bottom: none; }
+.impactIcon { font-size: 1rem; flex-shrink: 0; }
+.impactLabel { flex: 1; font-size: 0.85rem; color: var(--text-secondary); }
+.impactValue { font-weight: 700; font-size: 0.9rem; color: var(--teal-primary); }
+
+.adminNote {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.adminNote strong { color: var(--teal-primary); }
+.tabSection {}
+.tabsRow { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+
+/* Papers */
+.papersGrid { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.paperCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.paperCard:hover { border-color: var(--border-hover); background: var(--bg-card-hover); }
+
+.paperHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.paperYear { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+
+.paperTitle {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.paperAuthors { font-size: 0.85rem; color: var(--teal-primary); margin-bottom: 0.25rem; }
+.paperJournal { font-size: 0.82rem; color: var(--text-muted); font-style: italic; margin-bottom: 0.75rem; }
+
+.paperTags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+
+.linkedModel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  background: rgba(139,92,246,0.08);
+  border: 1px solid rgba(139,92,246,0.2);
+  border-radius: var(--radius-sm);
+}
+
+.linkedLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.linkedBadge {
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem;
+  transition: var(--transition-fast);
+}
+
+.linkedBadge:hover { opacity: 0.8; }
+
+.abstract {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.abstract.expanded { max-height: 500px; }
+
+.abstract p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--teal-primary);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 0.75rem;
+}
+
+.paperActions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+/* Patents */
+.patentsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+.patentCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.patentCard:hover { border-color: var(--border-hover); transform: translateY(-4px); box-shadow: var(--shadow-glow); }
+
+.patentHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+
+.patentIconWrap { text-align: center; margin-bottom: 1rem; }
+.patentBigIcon { font-size: 3rem; }
+
+.patentTitle {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.patentMeta { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.25rem; }
+.metaLabel { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 0.2rem; }
+.metaVal { font-size: 0.88rem; color: var(--text-primary); font-weight: 500; }
+.patentDesc { font-size: 0.87rem; color: var(--text-secondary); line-height: 1.7; }
+
+/* Models */
+.modelsGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+.modelCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modelCard:hover { border-color: var(--border-hover); transform: translateY(-4px); box-shadow: var(--shadow-glow); }
+
+.modelHeader { display: flex; align-items: flex-start; gap: 1rem; }
+.modelIcon { font-size: 2rem; flex-shrink: 0; }
+.modelName { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); }
+.modelType { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+.modelMetrics { display: flex; gap: 1rem; }
+.metric { text-align: center; flex: 1; background: var(--bg-secondary); border-radius: var(--radius-sm); padding: 0.75rem 0.5rem; }
+.metricVal { display: block; font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; }
+.metricLabel { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.accuracyBar { height: 6px; background: var(--bg-secondary); border-radius: 100px; overflow: hidden; }
+.accFill { height: 100%; border-radius: 100px; transition: width 1s ease; }
+
+.modelDesc { font-size: 0.87rem; color: var(--text-secondary); line-height: 1.6; }
+.modelFeatures { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.modelTags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+@media (max-width: 1100px) {
+  .profileGrid { grid-template-columns: 1fr 1fr; }
+  .statsPanel { grid-column: 1 / -1; }
+  .modelsGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .profileGrid { grid-template-columns: 1fr; }
+  .patentsGrid { grid-template-columns: 1fr; }
+  .modelsGrid { grid-template-columns: 1fr; }
+  .patentMeta { grid-template-columns: 1fr; }
+}
